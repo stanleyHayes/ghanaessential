@@ -2,7 +2,8 @@
 
 `GhanaEssential` is an independent, source-linked directory of Ghana emergency and essential-service contacts. It is not a dispatch service and never treats a published phone number as proof that a call will connect.
 
-Canonical web/API addresses remain pre-release until production evidence supports the beta transition.
+- Web: <https://essential.digitalghana.dev>
+- API: <https://api-essential.digitalghana.dev>
 
 ## Verification
 

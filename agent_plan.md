@@ -1,6 +1,6 @@
 # GhanaEssential execution ledger
 
-Status: Implementation — beta candidate  
+Status: Public beta — verified 2026-09-01
 Canonical hostname: `essential.digitalghana.dev`
 
 ## Product definition gate
@@ -18,4 +18,4 @@ Canonical hostname: `essential.digitalghana.dev`
 | P-0.1 | Product definition and source review | Done | Codex | — | NADMO, NAS, GNFS and Ghana Police official sources reviewed 2026-09-01 |
 | P-0.2 | Domain contracts and fixtures | Done | Codex | P-0.1 | Five source-complete contacts; staleness, national-112 and no-personal-data invariants |
 | P-1.1 | Implementation | Done | Codex | P-0.2 | Read-only Go API, identical offline export and Next.js contact UI pass the complete local quality gate |
-| P-2.1 | Production release | In progress | Codex | P-1.1 | CI, canonical smoke, browser safety/SEO and rollback evidence remain |
+| P-2.1 | Production release | Done | Codex | P-1.1 | CI, canonical TLS, API/CORS/offline export, browser safety/SEO and provider rollback/restore evidence recorded |

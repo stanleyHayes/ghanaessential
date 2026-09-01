@@ -1,14 +1,9 @@
 # GhanaEssential
 
-`GhanaEssential` is an independent Digital Ghana public-infrastructure product. Its canonical public home is `https://essential.digitalghana.dev` after production evidence supports a lifecycle transition.
+`GhanaEssential` is an independent, source-linked directory of Ghana emergency and essential-service contacts. It is not a dispatch service and never treats a published phone number as proof that a call will connect.
 
-## Before implementation
-
-1. Record the problem, users, non-goals, source rights and acceptance evidence in `agent_plan.md`.
-2. Replace the placeholder source-register record only after authority and licence review.
-3. Add domain contracts before transport or UI code.
-4. Keep deployments fail-closed until required provider values exist.
+Canonical web/API addresses remain pre-release until production evidence supports the beta transition.
 
 ## Verification
 
-Run `ruby scripts/validate.rb`. Product-specific checks are added to the same quality workflow as implementation lands.
+Run `pnpm install` and `pnpm check` for source/freshness validation, Go tests/vet, fixture safety tests, TypeScript and the production web build.

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ghanaessential-api
+    runtime: go
+    plan: free
+    region: frankfurt
+    buildCommand: go build -trimpath -o bin/ghanaessential-api ./cmd/api
+    startCommand: ./bin/ghanaessential-api
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGIN
+        value: https://essential.digitalghana.dev

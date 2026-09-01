@@ -2,14 +2,22 @@
 
 require "json"
 require "pathname"
+require "date"
 
 root = Pathname.new(__dir__).parent
-required = %w[README.md AGENTS.md agent_plan.md SECURITY.md LICENSE contracts/README.md docs/adr/0001-product-boundary.md docs/governance/source-register.json docs/runbooks/operations.md docs/runbooks/release-evidence.md infra/vercel.json]
+required = %w[README.md AGENTS.md agent_plan.md SECURITY.md LICENSE package.json pnpm-lock.yaml tsconfig.json next.config.ts vercel.json go.mod render.yaml data/contacts.json cmd/api/main.go tests/contact.test.mjs app/layout.tsx app/page.tsx app/styles.css app/icon.svg app/opengraph-image.tsx contracts/README.md docs/adr/0001-product-boundary.md docs/governance/source-register.json docs/runbooks/operations.md docs/runbooks/release-evidence.md infra/vercel.json]
 missing = required.reject { |path| root.join(path).file? }
 abort "missing required files: #{missing.join(', ')}" unless missing.empty?
 
 source_register = JSON.parse(root.join("docs/governance/source-register.json").read)
 abort "source register must contain at least one record" if source_register.fetch("sources", []).empty?
+abort "source decision is blocked or unknown" if source_register.fetch("sources").any? { |source| ["blocked", "unknown"].include?(source.fetch("publicationDecision")) }
+dataset = JSON.parse(root.join("data/contacts.json").read)
+abort "beta must contain exactly five contacts" unless dataset.fetch("contacts").length == 5
+abort "non-verified record in canonical fixture" if dataset.fetch("contacts").any? { |contact| contact.fetch("status") != "VERIFIED" }
+reviewed = Date.parse(dataset.fetch("reviewedAt")) rescue nil
+abort "invalid reviewedAt" unless reviewed
+abort "contact fixture is stale" if (Date.today - reviewed).to_i > 30
 
 contents = required.map { |path| root.join(path).read }.join("\n")
 template_marker = ["__", "PRODUCT_"].join

@@ -1,5 +1,5 @@
 # Contracts
 
-Place versioned public contracts here only after the product definition gate passes. CI must lint committed contracts, detect generated-artifact drift, exercise representative fixtures, and reject breaking changes against the default branch.
+The beta exposes a deliberately small read-only contract: `GET /health`, `GET /v1/contacts`, and the identical downloadable `GET /v1/offline.json` fixture.
 
-Do not invent REST, GraphQL, event, or SDK parity merely to satisfy a template. Choose interfaces from demonstrated consumers and document the decision.
+No GraphQL, mutation, incident-reporting or location endpoint exists. The fixture is the contract until demonstrated consumers justify a generated SDK.

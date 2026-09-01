@@ -2,15 +2,9 @@
   "$schema": "./source-register.schema.json",
   "product": "ghanaessential",
   "sources": [
-    {
-      "id": "definition-required",
-      "authority": null,
-      "title": "Replace after source review",
-      "url": null,
-      "licence": "unknown",
-      "publicationDecision": "blocked",
-      "reviewedAt": null,
-      "notes": "Unknown licence blocks canonical publication."
-    }
+    {"id":"nadmo-contact","authority":"National Disaster Management Organisation","title":"NADMO emergency contacts","url":"https://nadmo.gov.gh/contact","licence":"official factual contact information; source rights retained","publicationDecision":"metadata-link-only","reviewedAt":"2026-09-01","notes":"Publishes 112, NADMO 0302964884 and agency numbers 191/192/193."},
+    {"id":"nas-home","authority":"National Ambulance Service","title":"NAS official emergency page","url":"https://www.nas.gov.gh/","licence":"official factual contact information; source rights retained","publicationDecision":"metadata-link-only","reviewedAt":"2026-09-01","notes":"Confirms 112 as the 24/7 emergency medical network number."},
+    {"id":"gnfs-home","authority":"Ghana National Fire Service","title":"GNFS official homepage","url":"https://gnfs.gov.gh/","licence":"official factual contact information; source rights retained","publicationDecision":"metadata-link-only","reviewedAt":"2026-09-01","notes":"Confirms 112 and 0299340383 for fire/rescue."},
+    {"id":"police-official","authority":"Ghana Police Service","title":"Ghana Police official publication index","url":"https://police.gov.gh/en/index.php/publication-officials/","licence":"official factual contact information; source rights retained","publicationDecision":"metadata-link-only","reviewedAt":"2026-09-01","notes":"Confirms police emergency numbers 191 and 18555."}
   ]
 }

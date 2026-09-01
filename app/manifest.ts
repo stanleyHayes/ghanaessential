@@ -1,0 +1,1 @@
+import type{MetadataRoute}from"next";export default function manifest():MetadataRoute.Manifest{return{name:"GhanaEssential",short_name:"Essential",description:"Verified emergency contacts for Ghana",start_url:"/",display:"standalone",background_color:"#f5f1e8",theme_color:"#185b43",icons:[{src:"/icon.svg",sizes:"any",type:"image/svg+xml"}]}}

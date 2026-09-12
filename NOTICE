@@ -1,0 +1,20 @@
+GhanaEssential
+Copyright 2026 Digital Ghana contributors
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+This product is part of the Digital Ghana portfolio (https://digitalghana.dev).
+It is an independent open-source project and is not operated by, endorsed by, or
+affiliated with the Government of Ghana or any of its agencies.
+
+Referenced source documents and third-party datasets retain their own rights and
+are not relicensed by inclusion here. The contact records distributed with this
+repository cite official institutional publications by authority, stable URL and
+verification date, as recorded in docs/governance/source-register.json. Those
+sources are published under their own terms, which always override the Apache
+License 2.0 applied to this repository's own code, configuration and
+documentation. Reusing a referenced source document, or any dataset imported
+from one, requires complying with that source's terms rather than with this
+licence.
